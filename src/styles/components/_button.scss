@@ -1,0 +1,17 @@
+@use '../abstracts' as abs;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 36px;
+  border-radius: 999px;
+  background: abs.$color-accent;
+  color: abs.$color-white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  border: 0;
+  cursor: pointer;
+}

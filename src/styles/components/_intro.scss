@@ -1,0 +1,100 @@
+@use '../abstracts/' as abs;
+
+.intro-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  min-height: 100dvh;
+  overflow: hidden;
+  color: rgba(116, 88, 66, 0.78);
+  text-align: center;
+  background: #f5f1ea;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: url('../../assets/images/intro-background.png') center center / 100% auto no-repeat;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    min-height: 100dvh;
+    padding: 0 20px clamp(28px, 8svh, 54px);
+    box-sizing: border-box;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__button {
+    min-width: 0;
+    min-height: 0;
+    padding: 16px 32px;
+    border: 0.3px solid rgba(127, 101, 80, 0.5);
+    border-radius: 0;
+    background: transparent;
+    color: rgba(90, 62, 66, 0.9);
+    font-family: abs.$text-font-stack;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: 0;
+    text-transform: lowercase;
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(83, 63, 48, 0.05);
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      color 0.2s ease,
+      box-shadow 0.2s ease;
+
+    &:hover {
+      border-color: rgba(127, 101, 80, 0.5);
+      background: rgba(90, 62, 66, 0.06);
+      color: rgba(90, 62, 66, 1);
+      box-shadow: 0 6px 16px rgba(83, 63, 48, 0.12);
+    }
+
+    &:active {
+      border-color: rgba(127, 101, 80, 0.5);
+      background: rgba(90, 62, 66, 0.12);
+      box-shadow: inset 0 1px 4px rgba(83, 63, 48, 0.12);
+    }
+  }
+
+  &.hidden {
+    display: none;
+  }
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+@media screen and (max-width: 868px) {
+  .intro-overlay::before {
+    background-size: cover;
+  }
+  @media screen and (max-width: 520px) {
+    .intro-overlay {
+      &__content {
+        padding: 0 16px 26px;
+      }
+
+      &__button {
+        padding: 16px 32px;
+        font-size: 20px;
+      }
+    }
+  }
+}

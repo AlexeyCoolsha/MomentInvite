@@ -1,0 +1,17 @@
+@use '../abstracts' as abs;
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background: abs.$body-background;
+  background-color: abs.$body-background-color;
+}
+
+#app {
+  position: relative;
+  z-index: 0;
+}

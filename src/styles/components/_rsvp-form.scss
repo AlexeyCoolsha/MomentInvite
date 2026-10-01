@@ -1,0 +1,153 @@
+@use '../abstracts' as abs;
+
+.rsvp-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+
+  &__group {
+    margin-bottom: 40px;
+  }
+
+  &__label {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: abs.$text-color;
+    letter-spacing: 0.5px;
+  }
+
+  &__subtitle {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    color: abs.$color-muted;
+    margin-bottom: 8px;
+    margin-top: 0;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-bottom: 2px solid abs.$color-light-gray;
+    border-radius: 0;
+    font-size: 15px;
+    font-family: inherit;
+    color: abs.$text-color;
+    transition:
+      border-color 0.3s ease,
+      box-shadow 0.3s ease;
+    background: transparent;
+
+    &:focus {
+      outline: none;
+      border-bottom-color: abs.$color-accent;
+      box-shadow: 0 1px 0 0 abs.$color-accent;
+    }
+
+    &::placeholder {
+      color: abs.$color-muted-light;
+    }
+  }
+
+  &__radio-group,
+  &__checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__radio-item,
+  &__checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+  }
+
+  &__radio-input,
+  &__checkbox-input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: abs.$color-accent;
+    flex-shrink: 0;
+  }
+
+  &__radio-label,
+  &__checkbox-label {
+    cursor: pointer;
+    font-size: 15px;
+    color: abs.$text-color;
+    user-select: none;
+  }
+
+  &__submit-btn {
+    width: 100%;
+    padding: 14px 36px;
+    margin-top: 20px;
+    border-radius: 999px;
+    background-color: abs.$container-background-color;
+    border: 2px solid abs.$color-accent;
+    color: abs.$color-accent;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+
+  &__error {
+    color: abs.$color-error;
+    font-size: 13px;
+    margin-top: 8px;
+    display: none;
+
+    &--visible {
+      display: block;
+    }
+  }
+
+  &__success {
+    color: abs.$color-success;
+    font-size: 14px;
+    margin-top: 16px;
+    padding: 12px 16px;
+    background: abs.$color-success-bg;
+    border-radius: 8px;
+    display: none;
+
+    &--visible {
+      display: block;
+    }
+  }
+
+  &__loading {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(abs.$color-white, 0.3);
+    border-radius: 50%;
+    border-top-color: abs.$color-white;
+    animation: spin 0.8s linear infinite;
+    margin-right: 8px;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+

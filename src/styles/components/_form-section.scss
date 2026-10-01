@@ -1,0 +1,30 @@
+.form-section {
+    position: relative;
+    width: 100%;
+    &-decoration {
+      bottom: 0px;
+      right: -75px;
+      max-width: 45%;
+      z-index: 0;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .form-section {
+    &-decoration {
+      bottom: 20px;
+      right: -50px;
+      max-width: 50%;
+    }
+}
+}
+
+@media screen and (max-width: 410px) {
+    .form-section {
+    &-decoration {
+      bottom: 35px;
+    //   right: -25px;
+      max-width: 50%;
+    }
+}
+}

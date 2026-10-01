@@ -1,0 +1,81 @@
+@use '../abstracts' as abs;
+
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+
+/**
+ * Clear inner floats
+ */
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+/**
+ * Hide text while making it readable for screen readers
+ * 1. Needed in WebKit-based browsers because of an implementation bug;
+ *    See: https://code.google.com/p/chromium/issues/detail?id=457146
+ */
+.hide-text {
+  overflow: hidden;
+  padding: 0; /* 1 */
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+/**
+ * Hide element while making it readable for screen readers
+ * Shamelessly borrowed from HTML5Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+ */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.text-opacity {
+  &--10 { opacity: 0.1; }
+  &--15 { opacity: 0.15;}
+  &--20 { opacity: 0.2; }
+  &--25 { opacity: 0.25;}
+  &--30 { opacity: 0.3; }
+  &--35 { opacity: 0.35;}
+  &--40 { opacity: 0.4; }
+  &--45 { opacity: 0.45;}
+  &--50 { opacity: 0.5; }
+  &--55 { opacity: 0.55;}
+  &--60 { opacity: 0.6; }
+  &--65 { opacity: 0.65;}
+  &--70 { opacity: 0.7; }
+  &--75 { opacity: 0.75;}
+  &--80 { opacity: 0.8; }
+  &--85 { opacity: 0.85;}
+  &--90 { opacity: 0.9; }
+}
+
+.fz {
+  &--12 { font-size: 12px; }
+  &--14 { font-size: 14px; }
+  &--16 { font-size: 16px; }
+  &--18 { font-size: 18px; }
+  &--20 { font-size: 20px; }
+  &--22 { font-size: 22px; }
+  &--24 { font-size: 24px; }
+  &--26 { font-size: 26px; }
+  &--28 { font-size: 28px; }
+  &--30 { font-size: 30px; }
+}
+
+.no-scroll {
+  background-color: abs.$body-background-color-noscroll;
+}
+
+

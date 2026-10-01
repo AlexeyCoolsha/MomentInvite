@@ -1,0 +1,211 @@
+﻿<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/public/favicon.webp" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <title>Твоё приглашение</title>
+  </head>
+  <body>
+    <!-- Intro -->
+    <div id="introOverlay" class="intro-overlay">
+      <div class="intro-overlay__content">
+        <div class="intro-overlay__bottom">
+          <button id="enterBtn" class="intro-overlay__button button">нажать чтобы открыть</button>
+        </div>
+      </div>
+    </div>
+    <div id="app" style="display: none">
+      <div class="container">
+        <!-- Collage -->
+
+        <section class="section collage">
+          <div class="collage-background" aria-hidden="true"></div>
+          <div class="collage__content">
+            <div class="collage__single">
+              <img class="collage__photo" src="/src/assets/images/collage-photo.png" alt="Фото коллаж" />
+              <div class="collage__overlay collage__overlay--center">
+                <p class="collage__name">EKATERINA</p>
+                <p class="collage__age">34</p>
+                <p class="collage__event">BIRTHDAY EVENING</p>
+              </div>
+              <div class="collage__overlay collage__overlay--footer">
+                <p class="collage__date">18 MAY | 18:00</p>
+              </div>
+              <button class="audio-button audio-button--play" id="audioBtn">
+                <span class="audio-button__icon"></span>
+                <div class="audio-button__tooltip" data-tooltip>
+                  <span class="audio-button__tooltip-text">выключить музыку</span>
+                  <div class="audio-button__tooltip-pointer"></div>
+                </div>
+              </button>
+            </div>
+            <audio id="audio" src="./src/assets/audio/music.mp3" autoplay muted preload="auto"></audio>
+          </div>
+        </section>
+
+        <div class="collage-divider" aria-hidden="true"></div>
+        <!-- Introduction -->
+        <section class="section introduction">
+          <div class="introduction__inner wrapper">
+            <p class="introduction__lead">
+              Милый друг,<br />
+              приглашаю разделить<br />
+              со мной вечер<br />
+              по случаю дня рождения
+            </p>
+            <p class="introduction__date">18 мая | 18:00</p>
+          </div>
+        </section>
+
+        <section class="section calendar-section">
+          <div class="calendar-section__inner wrapper">
+            <div class="calendar-extended" aria-label="Календарь">
+              <div class="calendar-extended__month">Май</div>
+              <div class="calendar-extended__grid calendar-extended__grid--weekdays" aria-hidden="true">
+                <span>пн</span>
+                <span>вт</span>
+                <span>ср</span>
+                <span>чт</span>
+                <span>пт</span>
+                <span>сб</span>
+                <span>вс</span>
+              </div>
+              <div class="calendar-extended__grid calendar-extended__grid--dates">
+                <span class="calendar-extended__day calendar-extended__day--empty"></span>
+                <span class="calendar-extended__day calendar-extended__day--empty"></span>
+                <span class="calendar-extended__day calendar-extended__day--empty"></span>
+                <span class="calendar-extended__day calendar-extended__day--empty"></span>
+                <span class="calendar-extended__day">1</span>
+                <span class="calendar-extended__day">2</span>
+                <span class="calendar-extended__day">3</span>
+                <span class="calendar-extended__day">4</span>
+                <span class="calendar-extended__day">5</span>
+                <span class="calendar-extended__day">6</span>
+                <span class="calendar-extended__day">7</span>
+                <span class="calendar-extended__day">8</span>
+                <span class="calendar-extended__day">9</span>
+                <span class="calendar-extended__day">10</span>
+                <span class="calendar-extended__day">11</span>
+                <span class="calendar-extended__day">12</span>
+                <span class="calendar-extended__day">13</span>
+                <span class="calendar-extended__day">14</span>
+                <span class="calendar-extended__day">15</span>
+                <span class="calendar-extended__day">16</span>
+                <span class="calendar-extended__day">17</span>
+                <span class="calendar-extended__day calendar-extended__day--marked">18</span>
+                <span class="calendar-extended__day">19</span>
+                <span class="calendar-extended__day">20</span>
+                <span class="calendar-extended__day">21</span>
+                <span class="calendar-extended__day">22</span>
+                <span class="calendar-extended__day">23</span>
+                <span class="calendar-extended__day">24</span>
+                <span class="calendar-extended__day">25</span>
+                <span class="calendar-extended__day">26</span>
+                <span class="calendar-extended__day">27</span>
+                <span class="calendar-extended__day">28</span>
+                <span class="calendar-extended__day">29</span>
+                <span class="calendar-extended__day">30</span>
+                <span class="calendar-extended__day">31</span>
+              </div>
+            </div>
+            <div class="calendar-section__divider" aria-hidden="true"></div>
+          </div>
+        </section>
+      </div>
+      <div class="container container--location">
+        <section class="section location">
+          <div class="location__inner">
+            <div class="location__grid">
+              <p class="location__eyebrow">LOCATION</p>
+              <div class="location__media">
+                <img class="location__image" src="/src/assets/images/location.webp" alt="Ресторан Sigma Москва" />
+              </div>
+              <h2 class="location__title">SIGMA</h2>
+              <p class="location__address">Москва<br />ул. Сергея Макеева, 9, корп. 3</p>
+              <a class="location__button" href="https://yandex.com/maps/-/CPcUFNIO" target="_blank">ОТКРЫТЬ КАРТУ</a>
+            </div>
+          </div>
+        </section>
+        <section class="dress-code">
+          <div class="dress-code__inner">
+            <div class="wrapper">
+              <h2 class="location__title">DRESS CODE</h2>
+              <p class="dress-code__text">black & white</p>
+              <div class="dress-code__palette">
+                <div class="dress-code__swatch dress-code__swatch--black"></div>
+                <div class="dress-code__swatch dress-code__swatch--white"></div>
+              </div>
+              <p class="dress-code__text">Буду рада, если вы поддержите черно-белую гамму вечера</p>
+            </div>
+            <div class="location__media">
+                <img class="dress-code__image" src="/src/assets/images/dress-code.png" alt="Костюмы" />
+              </div>
+          </div>
+        </section>
+        <section class="quote">
+          <div class="quote__inner wrapper">
+            <div class="quote__quotes quote__quotes--top">
+              <img src="/src/assets/images/quotes1.png" alt="quotes">
+            </div>
+            <p class="quote__text">
+             Пусть этот вечер <br> станет красивым воспоминанием
+            </p>
+            <div class="quote__quotes quote__quotes--bottom">
+              <img src="/src/assets/images/quotes-2.png" alt="quotes">
+            </div>
+        </section>
+
+        <section class="section countdown-section">
+
+          <div class="countdown" data-countdown="2026-05-18T18:00:00">
+            <div class="countdown__label">до начала вечера</div>
+            <div class="countdown__timer">
+              <div class="countdown__unit">
+                <div class="countdown__value countdown__value--days">0</div>
+                <div class="countdown__unit-label" data-label="days">дней</div>
+              </div>
+              <div class="countdown__separator"></div>
+              <div class="countdown__unit">
+                <div class="countdown__value countdown__value--hours">00</div>
+                <div class="countdown__unit-label" data-label="hours">часов</div>
+              </div>
+              <div class="countdown__separator"></div>
+              <div class="countdown__unit">
+                <div class="countdown__value countdown__value--minutes">00</div>
+                <div class="countdown__unit-label" data-label="minutes">минут</div>
+              </div>
+              <div class="countdown__separator"></div>
+              <div class="countdown__unit">
+                <div class="countdown__value countdown__value--seconds">00</div>
+                <div class="countdown__unit-label" data-label="seconds">секунд</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="final-image">
+          <img class="final-image__photo" src="/src/assets/images/final-image.png" alt="Final Image" />
+        </section>
+      </div>
+
+      <footer class="footer">
+        <div class="footer__inner">
+          <span class="footer__text">С любовью создано командой «Твоё приглашение»</span>
+          <a
+            class="link link--icon footer__link"
+            href="https://t.me/YourInvite"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Telegram">
+            <img src="/src/assets/images/telegram-icon.svg" alt="" />
+          </a>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

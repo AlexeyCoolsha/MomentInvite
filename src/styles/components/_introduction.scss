@@ -1,0 +1,44 @@
+@use '../abstracts' as abs;
+
+.introduction {
+  position: relative;
+  width: 100%;
+  z-index: auto;
+  padding: 0 0 64px;
+  overflow: visible;
+  background: transparent;
+
+  &__inner {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
+  }
+
+  &__lead {
+    margin: 0;
+    color: abs.$color-accent;
+    font-family: abs.$text-font-stack;
+    font-size: clamp(17px, 3vw, 19px);
+    font-weight: 400;
+    line-height: 1.28;
+    letter-spacing: 0.24em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__date {
+    margin: 34px 0 0;
+    color: abs.$color-accent;
+    font-family: abs.$text-font-stack;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: 0.18em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+}

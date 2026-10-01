@@ -1,0 +1,20 @@
+.smooth {
+    position: absolute;
+    left: 50%;
+    bottom: 100px;
+    z-index: 3;
+    transform: translate(-50%, 100%);
+    width: 115%;
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.smooth--intro {
+    bottom: 100px;
+    z-index: 3;
+    transform: translate(-50%, 100%);
+    width: 115%;
+    pointer-events: none;
+}

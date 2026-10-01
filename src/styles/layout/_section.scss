@@ -1,0 +1,12 @@
+@use '../abstracts' as abs;
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;   
+    // margin-bottom: 72px;
+    padding-top: 72px;
+    &:first-child {
+        padding-top: 0;
+    }
+}

@@ -1,0 +1,98 @@
+@use '../abstracts' as abs;
+
+.dress-code {
+  margin-bottom: 125px;
+  &__palette {
+    display: flex;
+    gap: 42px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 24px;
+  }
+  &__swatch {
+    width: 126px;
+    height: 126px;
+    border-radius: 11px;
+    flex-shrink: 0;
+    position: relative;
+    &--black {
+      background: url(/src/assets/images/palette-black.jpg);
+      background-size: cover;
+    }
+    &--white {
+      background: url(/src/assets/images/palette-white.jpg);
+      background-size: cover;
+    }
+  }
+  &__text {
+    margin: 16px 0 0 0;
+    color: #6e5a4e;
+    font-size: 24px;
+    font-family: abs.$text-font-stack;
+    font-weight: 300;
+    line-height: 1.3;
+    letter-spacing: 0.11em;
+    text-align: center;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 1000px;
+    aspect-ratio: 1000/550;
+    object-fit: cover;
+    display: block;
+    background: #fff;
+    border-radius: 0;
+    box-shadow: none;
+    margin-top: 52px;
+  }
+
+  &__color {
+    width: 64px;
+    height: 128px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  &__labels {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+
+  &__label {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 64px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: abs.$text-color;
+    letter-spacing: 0.5px;
+    margin-top: 4px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: -48px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1px;
+      height: 36px;
+      background: abs.$text-color;
+    }
+  }
+
+  @media (max-width: 600px) {
+    &__color {
+      width: 50px;
+      height: 100px;
+    }
+    &__label {
+      width: 50px;
+      font-size: 12px;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+/// Regular font family
+$text-font-stack: 'Jost', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+/// Secondary font family
+$secondary-font-stack: 'Jost', serif !default;
+
+/// Collage font family
+$collage-font-stack: 'Martina scriptC', cursive !default;
+
+/// Editorial serif font family
+$serif-font-stack: 'Cormorant Garamond', 'Times New Roman', serif !default;
+
+/// Script font family
+$script-font-stack: 'Martina scriptC', cursive !default;
+
+///
+/// Colors
+///
+
+$text-color: #5A3E42 !default;
+$color-accent: #8E7C6F !default;
+$color-accent-lighter: #D8CDC4 !default;
+$container-background-color: transparent !default;
+$body-background: #E9E1D8 !default;
+$body-background-color: #E9E1D8 !default;
+$body-background-color-noscroll: #E9E1D8 !default;
+$color-light-gray: #ece9e6 !default;
+
+$color-white: #ffffff;
+$color-black: #000000;
+$color-gray: #3b3b3b;
+$color-muted: #666666;
+$color-muted-light: #bbbbbb;
+$color-error: #d9534f;
+$color-success: #28a745;
+$color-success-bg: #f0f9f6;
+$color-cream: #efe9e5;
+$color-cream-dark: #d8d1cc;
+$btn-size: 64px;
